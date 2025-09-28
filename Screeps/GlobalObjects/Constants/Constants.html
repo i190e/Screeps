@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <title>Screeps Manual</title>
+   </head>
+   <body>
+      <p>
+All the following constant names are available in the global scope:
+      </p>
+
+<table style='text-align: left; vertical-align: middle'>
+<tr style="font-size:90%; color: black;"> <th>Object.assign(exports, {<th>  </tr>
+<tr> <th><span style="font-size:70%; color: red;">OK</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NO_PATH</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NAME_EXISTS</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_BUSY</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">4</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NOT_FOUND</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NOT_ENOUGH_ENERGY</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">6</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NOT_ENOUGH_RESOURCES</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">6</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_INVALID_TARGET</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">7</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_FULL</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">8</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NOT_IN_RANGE</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">9</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_INVALID_ARGS</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_TIRED</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">11</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NO_BODYPART</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">12</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_NOT_ENOUGH_EXTENSIONS</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">6</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_RCL_NOT_ENOUGH</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">14</span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ERR_GCL_NOT_ENOUGH</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">15</span></th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_EXIT_TOP</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_EXIT_RIGHT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_EXIT_BOTTOM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_EXIT_LEFT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">7</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_EXIT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">101</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MY_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">102</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_HOSTILE_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">103</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_SOURCES_ACTIVE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">104</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_SOURCES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">105</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_DROPPED_RESOURCES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">106</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_STRUCTURES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">107</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MY_STRUCTURES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">108</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_HOSTILE_STRUCTURES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">109</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_FLAGS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">110</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_CONSTRUCTION_SITES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">111</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MY_SPAWNS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">112</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_HOSTILE_SPAWNS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">113</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MY_CONSTRUCTION_SITES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">114</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_HOSTILE_CONSTRUCTION_SITES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">115</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MINERALS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">116</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_NUKES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">117</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_TOMBSTONES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">118</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_POWER_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">119</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_MY_POWER_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">120</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_HOSTILE_POWER_CREEPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">121</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_DEPOSITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">122</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FIND_RUINS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">123</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOP</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOP_RIGHT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RIGHT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">BOTTOM_RIGHT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">4</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">BOTTOM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">BOTTOM_LEFT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">6</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LEFT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">7</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOP_LEFT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">8</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_RED</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_PURPLE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_BLUE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_CYAN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">4</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_GREEN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_YELLOW</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">6</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_ORANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">7</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_BROWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">8</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_GREY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">9</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">COLOR_WHITE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_CREEPS</span>: <span style="font-size:70%; color: green;">"creep"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_ENERGY</span>: <span style="font-size:70%; color: green;">"energy"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_RESOURCES</span>: <span style="font-size:70%; color: green;">"resource"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_SOURCES</span>: <span style="font-size:70%; color: green;">"source"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_MINERALS</span>: <span style="font-size:70%; color: green;">"mineral"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_DEPOSITS</span>: <span style="font-size:70%; color: green;">"deposit"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_STRUCTURES</span>: <span style="font-size:70%; color: green;">"structure"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_FLAGS</span>: <span style="font-size:70%; color: green;">"flag"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_CONSTRUCTION_SITES</span>: <span style="font-size:70%; color: green;">"constructionSite"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_NUKES</span>: <span style="font-size:70%; color: green;">"nuke"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_TERRAIN</span>: <span style="font-size:70%; color: green;">"terrain"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_TOMBSTONES</span>: <span style="font-size:70%; color: green;">"tombstone"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_POWER_CREEPS</span>: <span style="font-size:70%; color: green;">"powerCreep"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LOOK_RUINS</span>: <span style="font-size:70%; color: green;">"ruin"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+
+
+
+
+
+<tr style="font-size:90%; color: black;"> <th>});<th>  </tr>
+</table>
+
+   </body>
+</html>
