@@ -6,116 +6,149 @@
    </head>
    <body>
       <p>
-         <b>
-            Game.cpu.getUsed()
-if(Game.cpu.getUsed() > Game.cpu.tickLimit / 2) {
-    console.log("Used half of CPU already!");
-}for(const name in Game.creeps) {
+
+<span style="font-size:150%; color: blue;">Game.cpu.getHeapStatistics()</span>
+<p>This method is only available when Virtual machine is set to Isolated in your account runtime settings.</p>
+<p>Use this method to get heap statistics for your virtual machine. 
+The return value is almost identical to the Node.js function v8.getHeapStatistics(). 
+This function returns one additional property: externally_allocated_size which is the total amount of currently allocated memory 
+which is not included in the v8 heap but counts against this isolate's memory limit. ArrayBuffer instances over a certain size are externally 
+allocated and will be counted here.
+</p>
+<p>Return value</p>
+<p>Returns an objects with heap statistics in the following format:</p>
+<p>
+
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th><span style="font-size:70%; color: black;">{</span></th> </tr>
+<tr> <th><span style="font-size:70%; color: green;">"total_heap_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">29085696</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"total_heap_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">29085696</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"total_heap_size_executable"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3670016</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"total_physical_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">26447928</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"total_available_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">319649520</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"used_heap_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">17493824</span></th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"heap_size_limit"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">343932928</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"malloced_memory"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">8192</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"peak_malloced_memory"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1060096</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"does_zap_garbage"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: green;">"externally_allocated_size"</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">38430000</span></th></tr>
+<tr> <th><span style="font-size:70%; color: black;">}</span></th> </tr>
+</table>
+</p>
+
+<p style="font-size:70%; color: grey;">
+let heap = Game.cpu.getHeapStatistics();
+console.log('Used ${heap.total_heap_size} / ${heap.heap_size_limit}');
+</p>
+
+
+<p> 
+    <span style="font-size:150%; color: blue;">Game.cpu.getUsed()</span>
+</p>
+ <p>Get amount of CPU time used from the beginning of the current game tick. Always returns 0 in the Simulation mode.</p>
+
+ <p>Return value</p>
+
+ <p>Returns currently used CPU time as a float number.</p>
+
+<p style="font-size:70%; color: grey;"> if(Game.cpu.getUsed() > Game.cpu.tickLimit / 2) { console.log("Used half of CPU already!");}</p>
+<p style="font-size:70%; color: grey;">
+    for(const name in Game.creeps) {
     const startCpu = Game.cpu.getUsed();
-
     // creep logic goes here
-
     const elapsed = Game.cpu.getUsed() - startCpu;
     console.log('Creep '+name+' has used '+elapsed+' CPU time');
-}
-Get amount of CPU time used from the beginning of the current game tick. Always returns 0 in the Simulation mode.
+}</p>
 
-Return value
-Returns currently used CPU time as a float number.
+<p>
+    <span style="font-size:150%; color: blue;">Game.cpu.halt()</span>
+</p>
 
-Game.cpu.halt()
-Game.cpu.halt();
-This method is only available when Virtual machine is set to Isolated in your account runtime settings.
+<p>This method is only available when Virtual machine is set to Isolated in your account runtime settings.</p>
+<p>Reset your runtime environment and wipe all data in heap memory.</p>
+<ps style="font-size:70%; color: grey;">Game.cpu.halt();</p>
 
-Reset your runtime environment and wipe all data in heap memory.
+ <p>
+    <span style="font-size:150%; color: blue;">Game.cpu.setShardLimits(limits)</span>
+</p>
+<p>Allocate CPU limits to different shards. Total amount of CPU should remain equal to Game.cpu.shardLimits. This method can be used only once per 12 hours.</p>
 
-Game.cpu.setShardLimits(limits)
-Game.cpu.setShardLimits({shard0: 20, shard1: 10});
-Allocate CPU limits to different shards. Total amount of CPU should remain equal to Game.cpu.shardLimits. This method can be used only once per 12 hours.
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>constant</th> <th>value</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">limits</th> <th style="font-size:85%; color: grey;">object&lt;string, number&gt;</th> <th style="font-size:90%; color: black;">An object with CPU values for each shard in the same format as Game.cpu.shardLimits.</th>  
+</table>
 
-parameter	type	description
-limits	object<string, number>	
-An object with CPU values for each shard in the same format as Game.cpu.shardLimits.
+ <p>Return value</p>
+ <p>One of the following codes:</p>
 
-Return value
-One of the following codes:
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>constant</th> <th>value</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">OK</th> <th style="font-size:85%; color: grey;">0</th> <th style="font-size:90%; color: black;">The operation has been scheduled successfully.</th>  
+<tr> <th style="font-size:90%; color: red;">ERR_BUSY</th> <th style="font-size:85%; color: grey;">-4</th> <th style="font-size:90%; color: black;">12-hours cooldown period is not over yet.</th>
+<tr> <th style="font-size:90%; color: red;">ERR_INVALID_ARGS</th> <th style="font-size:85%; color: grey;">-10</th> <th style="font-size:90%; color: black;">The argument is not a valid shard limits object.</th>
+ </table>
+ <p style="font-size:70%; color: grey;">Game.cpu.setShardLimits({shard0: 20, shard1: 10});</p>
 
-constant	value	description
-OK	0	
-The operation has been scheduled successfully.
+<p>
+    <span style="font-size:150%; color: blue;">Game.cpu.unlock()</span>
+</p>
+ <p>Unlock full CPU for your account for additional 24 hours. This method will consume 1 CPU unlock bound to your account (See Game.resources). If full CPU is not currently unlocked for your account, it may take some time (up to 5 minutes) before unlock is applied to your account.
+</p>
 
-ERR_BUSY	-4	
-12-hours cooldown period is not over yet.
+ <p>Return value</p>
 
-ERR_INVALID_ARGS	-10	
-The argument is not a valid shard limits object.
+ <p>One of the following codes:</p>
 
-Game.cpu.unlock()
-if(Game.cpu.unlockedTime && ((Game.cpu.unlockedTime - Date.now()) < 1000*60*60*24)) {
-    Game.cpu.unlock();
-}
-Unlock full CPU for your account for additional 24 hours. This method will consume 1 CPU unlock bound to your account (See Game.resources). If full CPU is not currently unlocked for your account, it may take some time (up to 5 minutes) before unlock is applied to your account.
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>constant</th> <th>value</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">OK</th> <th style="font-size:85%; color: grey;">0</th> <th style="font-size:90%; color: black;">The operation has been scheduled successfully.</th>  
+<tr> <th style="font-size:90%; color: red;">ERR_NOT_ENOUGH_RESOURCES</th> <th style="font-size:85%; color: grey;">-6</th> <th style="font-size:90%; color: black;">Your account does not have enough cpuUnlock resource.</th>  
+<tr> <th style="font-size:90%; color: red;">ERR_FULL</th> <th style="font-size:85%; color: grey;">-8</th> <th style="font-size:90%; color: black;">Your CPU is unlocked with a subscription.</th>  
+</table>
+ <p style="font-size:70%; color: grey;">if(Game.cpu.unlockedTime && ((Game.cpu.unlockedTime - Date.now()) < 1000*60*60*24)) {Game.cpu.unlock();}</p>
 
-Return value
-One of the following codes:
+<p>
+<span style="font-size:150%; color: blue;">Game.cpu.generatePixel()</span>
+</p>
 
-constant	value	description
-OK	0	
-The operation has been scheduled successfully.
+ <p>Generate 1 pixel resource unit for 10000 CPU from your bucket.</p>
+ <p>Return value</p>
+ <p>One of the following codes:</p>
 
-ERR_NOT_ENOUGH_RESOURCES	-6	
-Your account does not have enough cpuUnlock resource.
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>constant</th> <th>value</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">OK</th> <th style="font-size:85%; color: grey;">0</th> <th style="font-size:90%; color: black;">The operation has been scheduled successfully.</th>  
+<tr> <th style="font-size:90%; color: red;">ERR_NOT_ENOUGH_RESOURCES</th> <th style="font-size:85%; color: grey;">-6</th> <th style="font-size:90%; color: black;">Your bucket does not have enough CPU.</th>  
+</table>
+ <p style="font-size:70%; color: grey;">if(Game.cpu.bucket == 10000) { Game.cpu.generatePixel();}</p>
 
-ERR_FULL	-8	
-Your CPU is unlocked with a subscription.
+ <p>
+    <span style="font-size:150%; color: blue;">Game.getObjectById(id)</span>
+</p>
 
-Game.cpu.generatePixel()
-if(Game.cpu.bucket == 10000) {
-    Game.cpu.generatePixel();
-}
-Generate 1 pixel resource unit for 10000 CPU from your bucket.
+ <p>Get an object with the specified unique ID. It may be a game object of any type. Only objects from the rooms which are visible to you can be accessed.</p>
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>parameter</th> <th>type</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">id</th> <th style="font-size:85%; color: grey;">string</th> <th style="font-size:90%; color: black;">The unique identificator.</th>  
+</table>
+ <p>Return value</p>
+ <p>Returns an object instance or null if it cannot be found.</p>
+ <p>creep.memory.sourceId = creep.pos.findClosestByRange(FIND_SOURCES).id;</p>
+ <p>const source = Game.getObjectById(creep.memory.sourceId);</p>
 
-Return value
-One of the following codes:
+ <p>
+    <span style="font-size:150%; color: blue;">Game.notify(message, [groupInterval])</span>
+</p>
 
-constant	value	description
-OK	0	
-The operation has been scheduled successfully.
+ <p>Send a custom message at your profile email. This way, you can set up notifications to yourself on any occasion within the game. You can schedule up to 20 notifications during one game tick. Not available in the Simulation Room.</p>
+<table style='text-align: left; vertical-align: middle'>
+<tr> <th>parameter</th> <th>type</th> <th>description</th>  </tr>
+<tr> <th style="font-size:90%; color: red;">message</th> <th style="font-size:85%; color: grey;">string</th> <th style="font-size:90%; color: black;">Custom text which will be sent in the message. Maximum length is 1000 characters.</th>  
+<tr> <th style="font-size:90%; color: red;">groupInterval</th> <th style="font-size:85%; color: grey;">number</th> <th style="font-size:90%; color: black;">If set to 0 (default), the notification will be scheduled immediately. Otherwise, it will be grouped with other notifications and mailed out later using the specified time in minutes.</th>  
+</table>
 
-ERR_NOT_ENOUGH_RESOURCES	-6	
-Your bucket does not have enough CPU.
-
-Game.getObjectById(id)
-creep.memory.sourceId = creep.pos.findClosestByRange(FIND_SOURCES).id;
-const source = Game.getObjectById(creep.memory.sourceId);
-Get an object with the specified unique ID. It may be a game object of any type. Only objects from the rooms which are visible to you can be accessed.
-
-parameter	type	description
-id	string	
-The unique identificator.
-
-Return value
-Returns an object instance or null if it cannot be found.
-
-Game.notify(message, [groupInterval])
-if(creep.hits < creep.memory.lastHits) {
-    Game.notify('Creep '+creep+' has been attacked at '+creep.pos+'!');
-}
-creep.memory.lastHits = creep.hits;if(Game.spawns['Spawn1'].energy == 0) {
-    Game.notify(
-        'Spawn1 is out of energy',
-        180  // group these notifications for 3 hours
-    );
-}
-Send a custom message at your profile email. This way, you can set up notifications to yourself on any occasion within the game. You can schedule up to 20 notifications during one game tick. Not available in the Simulation Room.
-
-parameter	type	description
-message	string	
-Custom text which will be sent in the message. Maximum length is 1000 characters.
-
-groupInterval	number	
-If set to 0 (default), the notification will be scheduled immediately. Otherwise, it will be grouped with other notifications and mailed out later using the specified time in minutes.
-         </b>
+<p style="font-size:70%; color: grey;">if(creep.hits < creep.memory.lastHits) {Game.notify('Creep '+creep+' has been attacked at '+creep.pos+'!');}creep.memory.lastHits = creep.hits;</p>
+<p style="font-size:70%; color: grey;"> if(Game.spawns['Spawn1'].energy == 0) {Game.notify('Spawn1 is out of energy',180  // group these notifications for 3 hours);}</p>
       </p>
    </body>
 </html>
