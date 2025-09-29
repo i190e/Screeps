@@ -312,8 +312,230 @@ All the following constant names are available in the global scope:
 <tr> <th><span style="font-size:70%; color: red;">MAX_CREEP_SIZE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50</span>,</th></tr>
 <tr> <th></th></tr>
 <tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_REGEN_TIME</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_MIN_AMOUNT</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"H"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"O"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"L"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"K"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"Z"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"U"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"X"</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;"></span><span style="font-size:70%; color: green;"></span>},<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr style="font-size:90%; color: black;"> <th>},<th>  </tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_RANDOM_FACTOR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_DENSITY</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">1</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">15000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">2</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">35000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">3</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">70000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">4</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">100000</span>,</th></tr>
+<tr style="font-size:90%; color: black;"> <th>},<th>  </tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_DENSITY_PROBABILITY</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">1</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">0.1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">2</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">0.5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">3</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">0.9</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">4</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">1.0</span>,</th></tr>
+<tr style="font-size:90%; color: black;"> <th>},<th>  </tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MINERAL_DENSITY_CHANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.05</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DENSITY_LOW</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DENSITY_MODERATE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DENSITY_HIGH</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DENSITY_ULTRA</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">4</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DEPOSIT_EXHAUST_MULTIPLY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.001</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DEPOSIT_EXHAUST_POW</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1.2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DEPOSIT_DECAY_TIME</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERMINAL_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">300000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERMINAL_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERMINAL_SEND_COST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERMINAL_MIN_SEND</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERMINAL_COOLDOWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKER_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKER_COOLDOWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">100000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKER_ENERGY_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">300000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKER_GHODIUM_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKE_LAND_TIME</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKE_RANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKE_DAMAGE</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">0</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">10000000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">2</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">5000000</span>,</th></tr>
+<tr style="font-size:90%; color: black;"> <th>},<th>  </tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FACTORY_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FACTORY_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOMBSTONE_DECAY_PER_PART</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOMBSTONE_DECAY_POWER_CREEP</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RUIN_DECAY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">NUKE_DAMAGE</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">'powerBank'</span>:<span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr style="font-size:90%; color: black;"> <th>},<th>  </tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">PORTAL_DECAY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">30000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ORDER_SELL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"sell"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ORDER_BUY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"buy",</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MARKET_FEE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.05,</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MARKET_MAX_ORDERS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MARKET_ORDER_LIFE_TIME</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000*60*60*24*30,</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">FLAGS_LIMIT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10000,</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SUBSCRIPTION_TOKEN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"token"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CPU_UNLOCK</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"cpuUnlock"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">PIXEL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"pixel"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ACCESS_KEY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"accessKey"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">PIXEL_CPU_COST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"10000"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ENERGY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"energy"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_POWER</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"power"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_HYDROGEN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"H"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_OXYGEN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"U"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"L"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"K"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"Z"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"X"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"G"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_SILICON</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"silicon"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_METAL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"metal"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_BIOMASS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"biomass"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_MIST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"mist"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_HYDROXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"OH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_KEANITE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ZK"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_LEMERGITE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"UL"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_HYDRIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"UH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_OXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"UO"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM_HYDRIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"KH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM_OXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"KO"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM_HYDRIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"LH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM_OXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"LO"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_HYDRIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ZH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_OXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ZO"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM_HYDRIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"GH"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM_OXIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"GO"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"UH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"UHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"KH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"KHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"LH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"LHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ZH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ZHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"GH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"GHO2"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_UTRIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XUH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_UTRIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XUHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_KEANIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XKH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_KEANIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XKHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_LEMERGIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XLH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XLHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_ZYNTHIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XZH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XZHO2"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_GHODIUM_ACID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XGH2O"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CATALYZED_GHODIUM_ALKALIDE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"XGHO2"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_OPS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">"ops"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_UTRIUM_BAR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'utrium_bar'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LEMERGIUM_BAR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'lemergium_bar'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ZYNTHIUM_BAR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'zynthium_bar'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_KEANIUM_BAR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'keanium_bar'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_GHODIUM_MELT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'ghodium_melt'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_OXIDANT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'oxidant'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_REDUCTANT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'reductant'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_PURIFIER</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'purifier'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_BATTERY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'battery'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_COMPOSITE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'composite'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CRYSTAL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'crystal'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_LIQUID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'liquid'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_WIRE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'wire'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_SWITCH</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'switch'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_TRANSISTOR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'transistor'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_MICROCHIP</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'microchip'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CIRCUIT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'circuit'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_DEVICE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'device'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CELL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'cell'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_PHLEGM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'phlegm'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_TISSUE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'tissue'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_MUSCLE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'muscle'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ORGANOID</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'organoid'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ORGANISM</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'organism'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ALLOY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'alloy'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_TUBE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'tube'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_FIXTURES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'fixtures'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_FRAME</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'frame'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_HYDRAULICS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'hydraulics'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_MACHINE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'machine'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CONDENSATE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'condensate'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_CONCENTRATE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'concentrate'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_EXTRACT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'extract'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_SPIRIT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'spirit'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_EMANATION</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'emanation'</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RESOURCE_ESSENCE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">'essence'</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
 
-<tr style="font-size:90%; color: black;"> <th>});<th>  </tr>
+
+
 </table>
 </body>
 </html>
