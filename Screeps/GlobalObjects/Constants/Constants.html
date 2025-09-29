@@ -3,14 +3,12 @@
    <head>
       <meta charset="UTF-8">
       <title>Screeps Manual</title>
-   </head>
-   <body>
-      <p>
+</head>
+<body>
 All the following constant names are available in the global scope:
-      </p>
 
 <table style='text-align: left; vertical-align: middle'>
-<tr style="font-size:90%; color: black;"> <th>Object.assign(exports, {<th>  </tr>
+<tr style="font-size:90%; color: black;"><th>Object.assign ( exports, { <th>  </tr>
 <tr> <th><span style="font-size:70%; color: red;">OK</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
 <tr> <th><span style="font-size:70%; color: red;">ERR_NO_PATH</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
 <tr> <th><span style="font-size:70%; color: red;">ERR_NAME_EXISTS</span>: -<span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
@@ -97,13 +95,225 @@ All the following constant names are available in the global scope:
 <tr> <th><span style="font-size:70%; color: red;">LOOK_RUINS</span>: <span style="font-size:70%; color: green;">"ruin"</span>,</th></tr>
 <tr> <th></th></tr>
 <tr> <th></th></tr>
-
-
-
-
+<tr> <th><span style="font-size:70%; color: red;">OBSTACLE_OBJECT_TYPES</span>: [<span style="font-size:70%; color: green;">"spawn", "creep", "powerCreep", "source", "mineral", "deposit", "controller", "constructedWall", "extension", "link", "storage", "tower", "observer", "powerSpawn", "powerBank", "lab", "terminal", "nuker", "factory", "invaderCore"</span>],</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MOVE</span>: <span style="font-size:70%; color: green;">"move"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">WORK</span>: <span style="font-size:70%; color: green;">"work"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CARRY</span>: <span style="font-size:70%; color: green;">"carry"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ATTACK</span>: <span style="font-size:70%; color: green;">"attack"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RANGED_ATTACK</span>: <span style="font-size:70%; color: green;">"ranged_attack"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOUGH</span>: <span style="font-size:70%; color: green;">"tough"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">HEAL</span>: <span style="font-size:70%; color: green;">"heal"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CLAIM</span>: <span style="font-size:70%; color: green;">"claim"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">BODYPART_COST</span>: {<span style="font-size:70%; color: green;"> "move": 50,"work": 100,"attack": 80,"carry": 50,"heal": 250,"ranged_attack": 150,"tough": 10,"claim": 600</span>]},</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th span style="font-size:70%; color: grey;">// WORLD_WIDTH and WORLD_HEIGHT constants are deprecated, please use Game.map.getWorldSize() instead</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">WORLD_WIDTH</span>: <span style="font-size:70%; color: green;">202</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">WORLD_HEIGHT</span>: <span style="font-size:70%; color: green;">202</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CREEP_LIFE_TIME</span>: <span style="font-size:70%; color: green;">1500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CREEP_CLAIM_LIFE_TIME</span>: <span style="font-size:70%; color: green;">600</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CREEP_CORPSE_RATE</span>: <span style="font-size:70%; color: green;">0.2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CREEP_PART_MAX_ENERGY</span>: <span style="font-size:70%; color: green;">125</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CARRY_CAPACITY</span>: <span style="font-size:70%; color: green;">50</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">HARVEST_POWER</span>: <span style="font-size:70%; color: green;">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">HARVEST_MINERAL_POWER</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">HARVEST_DEPOSIT_POWER</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">REPAIR_POWER</span>: <span style="font-size:70%; color: green;">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DISMANTLE_POWER</span>: <span style="font-size:70%; color: green;">50</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">BUILD_POWER</span>: <span style="font-size:70%; color: green;">30</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ATTACK_POWER</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">UPGRADE_CONTROLLER_POWER</span>: <span style="font-size:70%; color: green;">10</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">HEAL_POWER</span>: <span style="font-size:70%; color: green;">12</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RANGED_HEAL_POWER</span>: <span style="font-size:70%; color: green;">4</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">REPAIR_COST</span>: <span style="font-size:70%; color: green;">0.01</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">DISMANTLE_COST</span>: <span style="font-size:70%; color: green;">0.005</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RAMPART_DECAY_AMOUNT</span>: <span style="font-size:70%; color: green;">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RAMPART_DECAY_TIME</span>: <span style="font-size:70%; color: green;">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RAMPART_HITS</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">RAMPART_HITS_MAX</span>: {<span style="font-size:70%; color: green;">2: 300000, 3: 1000000, 4: 3000000, 5: 10000000, 6: 30000000, 7: 100000000, 8: 300000000</span> ,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ENERGY_REGEN_TIME</span>: <span style="font-size:70%; color: green;">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ENERGY_DECAY</span>: <span style="font-size:70%; color: green;">1000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SPAWN_HITS</span>: <span style="font-size:70%; color: green;">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SPAWN_ENERGY_START</span>: <span style="font-size:70%; color: green;">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SPAWN_ENERGY_CAPACITY</span>: <span style="font-size:70%; color: green;">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CREEP_SPAWN_TIME</span>: <span style="font-size:70%; color: green;">3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SPAWN_RENEW_RATIO</span>: <span style="font-size:70%; color: green;">1.2</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SOURCE_ENERGY_CAPACITY</span>: <span style="font-size:70%; color: green;">3000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SOURCE_ENERGY_NEUTRAL_CAPACITY</span>: <span style="font-size:70%; color: green;">1500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SOURCE_ENERGY_KEEPER_CAPACITY</span>: <span style="font-size:70%; color: green;">4000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">WALL_HITS</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">WALL_HITS_MAX</span>: <span style="font-size:70%; color: green;">300000000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">EXTENSION_HITS</span>: <span style="font-size:70%; color: green;">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">EXTENSION_ENERGY_CAPACITY</span>: {<span style="font-size:70%; color: green;">0: 50, 1: 50, 2: 50, 3: 50, 4: 50, 5: 50, 6: 50, 7: 100, 8: 200</span>},</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ROAD_HITS</span>: <span style="font-size:70%; color: green;">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ROAD_WEAROUT</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ROAD_WEAROUT_POWER_CREEP</span>: <span style="font-size:70%; color: green;">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ROAD_DECAY_AMOUNT</span>: <span style="font-size:70%; color: green;">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">ROAD_DECAY_TIME</span>: <span style="font-size:70%; color: green;">1000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LINK_HITS</span>: <span style="font-size:70%; color: green;">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LINK_HITS_MAX</span>: <span style="font-size:70%; color: green;">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LINK_CAPACITY</span>: <span style="font-size:70%; color: green;">800</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LINK_COOLDOWN</span>: <span style="font-size:70%; color: green;">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LINK_LOSS_RATIO</span>: <span style="font-size:70%; color: green;">0.03</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STORAGE_CAPACITY</span>: <span style="font-size:70%; color: green;">1000000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STORAGE_HITS</span>: <span style="font-size:70%; color: green;">10000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_SPAWN</span>: <span style="font-size:70%; color: green;">"spawn"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_EXTENSION</span>: <span style="font-size:70%; color: green;">"extension"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_ROAD</span>: <span style="font-size:70%; color: green;">"road"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_WALL</span>: <span style="font-size:70%; color: green;">"constructedWall"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_RAMPART</span>: <span style="font-size:70%; color: green;">"rampart"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_KEEPER_LAIR</span>: <span style="font-size:70%; color: green;">"keeperLair"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_PORTAL</span>: <span style="font-size:70%; color: green;">"portal"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_CONTROLLER</span>: <span style="font-size:70%; color: green;">"controller"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_LINK</span>: <span style="font-size:70%; color: green;">"link"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_STORAGE</span>: <span style="font-size:70%; color: green;">"storage"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_TOWER</span>: <span style="font-size:70%; color: green;">"tower"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_OBSERVER</span>: <span style="font-size:70%; color: green;">"observer"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_POWER_BANK</span>: <span style="font-size:70%; color: green;">"powerBank"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_POWER_SPAWN</span>: <span style="font-size:70%; color: green;">"powerSpawn"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_EXTRACTOR</span>: <span style="font-size:70%; color: green;">"extractor"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_LAB</span>: <span style="font-size:70%; color: green;">"lab"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_TERMINAL</span>: <span style="font-size:70%; color: green;">"container"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_CONTAINER</span>: <span style="font-size:70%; color: green;">"terminal"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_NUKER</span>: <span style="font-size:70%; color: green;">"nuker"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_FACTORY</span>: <span style="font-size:70%; color: green;">"factory"</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_INVADER_CORE</span>: <span style="font-size:70%; color: green;">"invaderCore"</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">STRUCTURE_NUKER</span>: {<span style="font-size:70%; color: green;">"spawn": 15000,"extension": 3000,"road": 300,"constructedWall": 1,"rampart": 1,"link": 5000,"storage": 30000,"tower": 5000,"observer": 8000,"powerSpawn": 100000,"extractor": 5000,"lab": 50000,"terminal": 100000,"container": 5000,"nuker": 100000,"factory": 100000</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONSTRUCTION_COST_ROAD_SWAMP_RATIO</span>: <span style="font-size:70%; color: green;">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONSTRUCTION_COST_ROAD_WALL_RATIO</span>: <span style="font-size:70%; color: green;">150</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_LEVELS</span>: {<span style="font-size:70%; color: green;">1: 200, 2: 45000, 3: 135000, 4: 405000, 5: 1215000, 6: 3645000, 7: 10935000</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_STRUCTURES</span>: {<span style="font-size:70%; color: green;"></span></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"spawn"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">0: 0, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 2, 8: 3</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"extension"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">0: 0, 1: 0, 2: 5, 3: 10, 4: 20, 5: 30, 6: 40, 7: 50, 8: 60</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"link"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 2, 6: 3, 7: 4, 8: 6</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"road"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">0: 2500, 1: 2500, 2: 2500, 3: 2500, 4: 2500, 5: 2500, 6: 2500, 7: 2500, 8: 2500</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"constructedWall"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 2500, 3: 2500, 4: 2500, 5: 2500, 6: 2500, 7: 2500, 8: 2500</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"rampart"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 2500, 3: 2500, 4: 2500, 5: 2500, 6: 2500, 7: 2500, 8: 2500</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"storage"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"tower"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 6</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"observer"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"powerSpawn"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"extractor"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 1, 7: 1, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"terminal"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 1, 7: 1, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"lab"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3, 7: 6, 8: 10</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"container"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">0: 5, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 5, 8: 5</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"nuker"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">     </span><span style="font-size:70%; color: green;">"factory"</span>:{<span style="font-size:70%; color: rgb(100, 33, 217);">1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 1, 8: 1</span>} </th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_DOWNGRADE</span>: {<span style="font-size:70%; color: rgb(100, 33, 217);">1: 20000, 2: 10000, 3: 20000, 4: 40000, 5: 80000, 6: 120000, 7: 150000, 8: 200000</span>},</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_DOWNGRADE_RESTORE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_DOWNGRADE_SAFEMODE_THRESHOLD</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_CLAIM_DOWNGRADE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">300</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_RESERVE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_RESERVE_MAX</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_MAX_UPGRADE_PER_TICK</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">15</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_ATTACK_BLOCKED_UPGRADE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">CONTROLLER_NUKE_BLOCKED_UPGRADE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">200</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SAFE_MODE_DURATION</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">20000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SAFE_MODE_COOLDOWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">SAFE_MODE_COST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_ENERGY_COST</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_POWER_ATTACK</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">600</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_POWER_HEAL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">400</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_POWER_REPAIR</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">800</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_OPTIMAL_RANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_FALLOFF_RANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">20</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TOWER_FALLOFF</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.75</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">OBSERVER_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">OBSERVER_RANGE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2000000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_CAPACITY_MAX</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_CAPACITY_MIN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_CAPACITY_CRIT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.3</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_DECAY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_BANK_HIT_BACK</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0.5</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_SPAWN_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_SPAWN_ENERGY_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_SPAWN_POWER_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">POWER_SPAWN_ENERGY_RATIO</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">EXTRACTOR_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">EXTRACTOR_COOLDOWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_HITS</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">500</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_MINERAL_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_ENERGY_CAPACITY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_BOOST_ENERGY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">20</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_BOOST_MINERAL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">30</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_COOLDOWN</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">10</span>, <span style="font-size:70%; color: grey;">// not used</span>,</th></tr> 
+<tr> <th><span style="font-size:70%; color: red;">LAB_REACTION_AMOUNT</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">5</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_UNBOOST_ENERGY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">0</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">LAB_UNBOOST_MINERAL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">15</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">GCL_POW</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2.4</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">GCL_MULTIPLY</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1000000</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">GCL_NOVICE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">3</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MODE_SIMULATION</span>: <span style="font-size:70%; color: blue;">null</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MODE_WORLD</span>: <span style="font-size:70%; color: blue;">null</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERRAIN_MASK_WALL</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">1</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERRAIN_MASK_SWAMP</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">2</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">TERRAIN_MASK_LAVA</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">4</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MAX_CONSTRUCTION_SITES</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">100</span>,</th></tr>
+<tr> <th><span style="font-size:70%; color: red;">MAX_CREEP_SIZE</span>: <span style="font-size:70%; color: rgb(100, 33, 217);">50</span>,</th></tr>
+<tr> <th></th></tr>
+<tr> <th></th></tr>
 
 <tr style="font-size:90%; color: black;"> <th>});<th>  </tr>
 </table>
-
-   </body>
+</body>
 </html>
